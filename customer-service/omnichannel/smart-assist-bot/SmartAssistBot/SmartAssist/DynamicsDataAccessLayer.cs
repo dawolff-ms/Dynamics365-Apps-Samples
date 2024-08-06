@@ -29,12 +29,6 @@ namespace Microsoft.BotBuilderSamples
         private readonly string accessToken;
 
         public DynamicsDataAccessLayer(IConfiguration configuration){
-            applicationId = Guid.Parse(configuration["DynamicsAppId"]);
-            clientSecret = configuration["DynamicsAppSecret"];
-            aadInstanceUrl = "https://login.microsoftonline.com";
-            organizationUrl = configuration["DynamicsOrgUrl"];
-            tenantId = Guid.Parse(configuration["TenantId"]);
-            accessToken = GetAccessToken().Result;
         }
 
         protected async Task<string> GetAccessToken()

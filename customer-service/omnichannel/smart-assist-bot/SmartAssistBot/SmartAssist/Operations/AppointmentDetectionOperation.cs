@@ -57,7 +57,7 @@ namespace CoreBot.SmartAssist.Operations
             return appointmentCardMessage;
         }
 
-        private AdaptiveCard ConstructionAppointmentCard()
+        public AdaptiveCard ConstructionAppointmentCard()
         {
             // Constructs the adaptive card similar to /SmartAssist/Cards/CreateAppointment.json
             var appointmentAdaptiveCard = new AdaptiveCard("1.0")
